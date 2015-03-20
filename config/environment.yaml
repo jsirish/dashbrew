@@ -8,7 +8,6 @@ os::packages:
   vim: true
   php5-mcrypt: true
   php5-gd: true
-  php5-tidy: true
 
 #
 # PHP Builds
@@ -20,7 +19,9 @@ php::builds:
   5.6.6:
     installed: true
     default: false
-    variants: dev
+    variants: 
+      - dev
+      - tidy
     extensions:
       xdebug:
         enabled: true
@@ -34,7 +35,9 @@ php::builds:
   5.4.38:
     installed: true
     default: false
-    variants: dev
+    variants:
+      - dev
+      - tidy
     extensions:
       xdebug:
         enabled: true
@@ -48,7 +51,9 @@ php::builds:
   5.3.29:
     installed: true
     default: false
-    variants: dev
+    variants:
+      - dev
+      - tidy
     extensions:
       xdebug:
         enabled: true
